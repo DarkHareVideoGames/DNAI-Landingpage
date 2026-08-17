@@ -231,19 +231,16 @@ body {
 
 .screen-art {
     height: 100%;
-    background: radial-gradient(circle at 60% 30%, #2b6b67, #071216 48%), linear-gradient(145deg, #172b2d, #020607);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative
 }
 
-.screen-art:before {
-    content: "";
-    position: absolute;
-    width: 70%;
-    height: 70%;
-    left: 16%;
-    top: 14%;
-    background: linear-gradient(145deg, transparent 45%, #00b99a 46%, #102f2e 50%, transparent 51%), radial-gradient(circle at 50% 70%, #071616, #0c2827 60%, transparent 61%);
-    filter: drop-shadow(0 0 18px #00e5c3)
+.screen-art img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
 }
 
 .ui-lines {
