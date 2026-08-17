@@ -436,11 +436,26 @@ body {
 .plan-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px
+    gap: 18px;
+    align-items: stretch;
 }
 
 .plan-grid.custom-grid {
     grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+}
+
+
+.plan-grid article.plan {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.plan-grid article.plan .price,
+.plan-grid article.plan ul,
+.plan-grid article.plan .btn {
+    margin-top: auto;
 }
 
 @media(max-width:1024px) {
@@ -739,6 +754,201 @@ footer .brand { display: flex; align-items: center; gap: 12px; text-decoration: 
 
     footer {
         padding: 30px 5vw
+    }
+}
+
+/* Agent Smith Showcase */
+.agent-smith-showcase {
+    position: relative;
+    overflow: hidden;
+}
+
+.agent-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.agent-mockup {
+    position: relative;
+}
+
+.agent-logo {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto 30px;
+    display: block;
+    filter: drop-shadow(0 0 30px rgba(0, 229, 195, 0.5));
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { filter: drop-shadow(0 0 30px rgba(0, 229, 195, 0.5)); }
+    50% { filter: drop-shadow(0 0 50px rgba(0, 229, 195, 0.8)); }
+}
+
+.agent-interface {
+    background: linear-gradient(145deg, #071517, #040b0d);
+    border: 1px solid #17373b;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.interface-header {
+    background: linear-gradient(90deg, #071517 0%, #0f2827 50%, #071517 100%);
+    padding: 16px 24px;
+    border-bottom: 1px solid #17373b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interface-title {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #00e5c3;
+    text-shadow: 0 0 10px rgba(0, 229, 195, 0.5);
+}
+
+.status-badge {
+    font-size: 10px;
+    font-weight: 700;
+    color: #00e5c3;
+    background: rgba(0, 229, 195, 0.15);
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 229, 195, 0.3);
+}
+
+.interface-body {
+    padding: 24px;
+}
+
+.interface-sections {
+    display: grid;
+    gap: 16px;
+}
+
+.interface-panel {
+    background: rgba(7, 21, 23, 0.8);
+    border: 1px solid #17373b;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.interface-panel:hover {
+    border-color: #00e5c3;
+    box-shadow: 0 0 30px rgba(0, 229, 195, 0.2);
+    transform: translateX(8px);
+}
+
+.panel-icon {
+    font-size: 32px;
+    color: #00e5c3;
+    min-width: 40px;
+    text-align: center;
+}
+
+.panel-content h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: #f3f8f7;
+}
+
+.panel-content p {
+    margin: 0;
+    color: #829795;
+    font-size: 12px;
+}
+
+.interface-footer {
+    padding: 20px 24px;
+    border-top: 1px solid #17373b;
+    background: rgba(7, 21, 23, 0.5);
+}
+
+.footer-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-stats span {
+    font-size: 12px;
+    color: #829795;
+    text-align: center;
+}
+
+.footer-stats b {
+    color: #00e5c3;
+    font-size: 24px;
+    display: block;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.agent-benefits h3 {
+    font-size: 28px;
+    letter-spacing: -1px;
+    margin: 0 0 24px;
+}
+
+.benefit-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.benefit-list li {
+    padding: 20px 0;
+    border-bottom: 1px solid #17373b;
+    color: #b7c7c5;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.benefit-list li:last-child {
+    border-bottom: none;
+}
+
+.benefit-list strong {
+    color: #00e5c3;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .agent-showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .agent-mockup {
+        max-width: 600px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 5vw;
+    }
+    
+    .agent-benefits h3 {
+        font-size: 24px;
+    }
+    
+    .footer-stats {
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }
 
