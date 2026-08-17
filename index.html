@@ -168,11 +168,16 @@
                     <h2>Leva a tua criatividade para o próximo nível.</h2>
                     <p>Diz-nos que hardware tens e o que queres fazer. Criamos o setup à medida.</p>
                 </div>
-                <form action="https://formspree.io/f/mbgrzojb" method="POST" id="contactForm"><input required
-                        name="name" placeholder="O teu nome" <input required type="email" name="email"
-                        placeholder="Email"><textarea required name="message" rows="4"
-                        placeholder="Que tipo de AI workstation procuras?"></textarea><button class="btn primary"
-                        type="submit">Pedir orçamento <span>→</span></button><small id="formMsg"></small></form>
+                <div class="contact">
+                    <!-- Formulário Corrigido -->
+                    <form action="https://formspree.io/f/mbgrzojb" method="POST" id="contactForm">
+                        <input required type="text" name="name" placeholder="O teu nome">
+                        <input required type="email" name="email" placeholder="Email">
+                        <textarea required name="message" rows="4" placeholder="Que tipo de AI workstation procuras?"></textarea>
+                        <button class="btn primary" type="submit">Pedir orçamento <span>→</span></button>
+                    </form>
+                    <!-- Fim Formulário -->
+                </div>
             </div>
         </section>
     </main>
@@ -182,3 +187,4 @@
         <p>IA local. A tua máquina. As tuas regras.</p><span>© 2026 DN Workstation</span>
     </footer>
 </body>
+
