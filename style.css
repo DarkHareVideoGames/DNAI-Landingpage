@@ -439,6 +439,65 @@ body {
     gap: 18px
 }
 
+.plan-grid.custom-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media(max-width:1024px) {
+    .plan-grid.custom-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width:768px) {
+    .plan-grid.custom-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.plan.custom {
+    border-color: #ff6b35;
+    background: linear-gradient(145deg, #0f1a1d, #08100f);
+}
+
+.plan.custom .plan-tag {
+    color: #ff8c42;
+}
+
+.plan.custom h3 {
+    color: #ffb380;
+}
+
+.plan.custom .price span {
+    color: #ff8c42;
+}
+
+.plan.custom li:before {
+    color: #ff8c42;
+}
+
+.plan.custom .btn {
+    border-color: #ff6b35;
+    background: linear-gradient(135deg, #ff6b35 0%, #e65100 100%);
+    color: white;
+}
+
+.plan-custom-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+
+@media(max-width:1200px) {
+    .plan-custom-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media(max-width:768px) {
+    .plan-custom-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 .plan {
     position: relative;
     padding: 34px
